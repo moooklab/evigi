@@ -1158,12 +1158,12 @@ header a.cart div.count span {
   font-size: 10px;
   text-transform: uppercase;
 }
-header.sticky menu a.logotype {
+header.sticky menu a.logotype, header.search menu a.logotype, header.catalog menu a.logotype, header.menu menu a.logotype {
   padding: 15px 47px 15px 48px;
   margin-bottom: unset;
 }
 @media (max-width: 640px) {
-  header.sticky menu a.logotype {
+  header.sticky menu a.logotype, header.search menu a.logotype, header.catalog menu a.logotype, header.menu menu a.logotype {
     display: grid;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1171,11 +1171,11 @@ header.sticky menu a.logotype {
     padding: 0px 32px;
   }
 }
-header.sticky menu a.logotype img {
+header.sticky menu a.logotype img, header.search menu a.logotype img, header.catalog menu a.logotype img, header.menu menu a.logotype img {
   width: 120px;
 }
 @media (max-width: 640px) {
-  header.sticky menu a.logotype img {
+  header.sticky menu a.logotype img, header.search menu a.logotype img, header.catalog menu a.logotype img, header.menu menu a.logotype img {
     width: 127px;
   }
 }
@@ -1495,20 +1495,26 @@ header section.catalog div.products a.product div.title, header section.catalog 
 }
 header section.menu {
   position: absolute;
-  top: 65px;
+  top: 95px;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 100%;
   background-color: white;
-  max-height: calc(100vh - 64px);
+  max-height: calc(100vh - 94px);
   display: grid;
   grid-template-rows: 0fr;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
   grid-column: breakout;
+}
+@media (max-width: 640px) {
+  header section.menu {
+    top: 65px;
+    max-height: calc(100vh - 64px);
+  }
 }
 header section.menu div.parent_wrap {
   grid-column: full;

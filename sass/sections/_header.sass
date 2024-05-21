@@ -38,7 +38,6 @@ header
                 svg
                     width: 36px
                     height: 36px
-                    
 
     menu
         position: absolute
@@ -170,7 +169,7 @@ header
                 font-size: 10px
                 text-transform: uppercase
 
-    &.sticky
+    &.sticky, &.search, &.catalog, &.menu
         menu
             a.logotype
                 padding: 15px 47px 15px 48px
@@ -427,17 +426,20 @@ header
 
     section.menu
         position: absolute
-        top: 65px
+        top: 95px
         left: 50%
         transform: translateX(-50%)
         width: 100%
         background-color: white
-        max-height: calc(100vh - 64px)
+        max-height: calc(100vh - 94px)
         display: grid
         grid-template-rows: 0fr
         transition: all .3s
         overflow: hidden
         grid-column: breakout
+        +screen(s)
+            top: 65px
+            max-height: calc(100vh - 64px)
 
         div.parent_wrap
             grid-column: full
