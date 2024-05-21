@@ -1,0 +1,957 @@
+section.main {
+  background-color: #C6D50A;
+  height: calc(100vh - 95px);
+  padding-bottom: 52px;
+  min-height: 800px;
+}
+@media (max-width: 960px) {
+  section.main {
+    min-height: unset;
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 640px) {
+  section.main {
+    height: calc(100vh - 65px);
+  }
+}
+section.main div.container {
+  position: relative;
+  grid-column: breakout;
+}
+@media (max-width: 640px) {
+  section.main div.container::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 65px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: black;
+  }
+}
+section.main div.text {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  position: relative;
+  text-align: center;
+  height: 100%;
+  z-index: 2;
+  color: white;
+  padding: 60px 20px;
+  padding-top: 100px;
+}
+section.main div.text::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+section.main div.text h1 {
+  margin-bottom: 60px;
+}
+@media (max-width: 960px) {
+  section.main div.text h1 {
+    font-size: 100px;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+}
+section.main div.text span {
+  font-weight: 400;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+@media (max-width: 960px) {
+  section.main div.text span {
+    margin-bottom: 20px;
+  }
+}
+section.main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  z-index: 1;
+}
+
+section.summer_one {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+@media (max-width: 960px) {
+  section.summer_one {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+}
+section.summer_one div.container {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-areas: "Title" "Video" "Text" "Products";
+  grid-template-columns: 1fr;
+  grid-gap: 50px 24px;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "Title" "Video" "Text" "Products";
+    grid-gap: 30px;
+  }
+}
+section.summer_one div.container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.summer_one div.container div.title {
+  grid-area: Title;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.title {
+    grid-template-columns: 1fr;
+  }
+}
+section.summer_one div.container div.title span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 117%;
+  color: #000;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.title span {
+    font-size: 18px;
+  }
+}
+section.summer_one div.container div.description {
+  grid-area: Text;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "Image1 Image2 Text";
+  grid-gap: 40px 24px;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.description {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "Image1 Image2" "Text Text";
+    grid-gap: 30px 16px;
+  }
+}
+section.summer_one div.container div.description img.first {
+  grid-area: Image1;
+  aspect-ratio: 496/680;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.summer_one div.container div.description img.second {
+  grid-area: Image2;
+  aspect-ratio: 496/680;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.summer_one div.container div.description span {
+  grid-area: Text;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.description span {
+    font-size: 15px;
+  }
+}
+section.summer_one div.container div.video {
+  grid-area: Video;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px 24px;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.video {
+    grid-template-columns: 1fr;
+  }
+}
+section.summer_one div.container div.video div.player {
+  position: relative;
+  grid-column: 2/5;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.video div.player {
+    grid-column: auto;
+  }
+}
+section.summer_one div.container div.video div.player video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  aspect-ratio: 1148/680;
+  width: 100%;
+}
+@media (max-width: 640px) {
+  section.summer_one div.container div.video div.player video {
+    aspect-ratio: 335/217;
+  }
+}
+section.summer_one div.container div.video div.player video::-webkit-media-controls {
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+section.summer_one div.container div.video div.player video:hover::-webkit-media-controls {
+  opacity: 1;
+}
+section.summer_one div.container div.video div.player div.play {
+  cursor: pointer;
+}
+section.summer_one div.container div.video div.player div.play div.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+section.summer_one div.container div.video div.player div.play div.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section.summer_one div.container div.video div.player div.play.played div.icon {
+  display: none;
+}
+section.summer_one div.container div.video span {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.video span {
+    font-size: 15px;
+  }
+}
+section.summer_one div.container div.products {
+  grid-area: Products;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.products {
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+}
+@media (max-width: 480px) {
+  section.summer_one div.container div.products {
+    grid-template-columns: 1fr;
+  }
+}
+section.summer_one div.container div.products span.text {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.products span.text {
+    font-size: 15px;
+  }
+}
+@media (max-width: 640px) {
+  section.summer_one div.container div.products span.text {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+}
+section.summer_one div.container div.products a.capsule_product {
+  display: grid;
+  grid-gap: 15px;
+}
+section.summer_one div.container div.products a.capsule_product img {
+  aspect-ratio: 366/487;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  section.summer_one div.container div.products a.capsule_product img {
+    aspect-ratio: 335/419;
+  }
+}
+section.summer_one div.container div.products a.capsule_product div.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+}
+section.summer_one div.container div.products a.capsule_product div.text strong {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  color: #000;
+}
+section.summer_one div.container div.products a.capsule_product div.text span.price {
+  font-family: Druk;
+  grid-area: Price;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  color: #000;
+}
+
+section.summer_two {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+@media (max-width: 960px) {
+  section.summer_two {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+section.summer_two div.container {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container {
+    grid-gap: 30px;
+  }
+}
+section.summer_two div.container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.summer_two div.container div.title {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.title {
+    grid-template-columns: 1fr;
+  }
+}
+section.summer_two div.container div.title span {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+  padding-top: 0.5em;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.title span {
+    font-size: 18px;
+  }
+}
+section.summer_two div.container div.description {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "Image1 Image2 Swiper Swiper" "Text . Swiper Swiper";
+  grid-gap: 30px 24px;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.description {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "Image1 Image2" "Text Text" "Swiper Swiper";
+    grid-gap: 30px 16px;
+  }
+}
+section.summer_two div.container div.description img.first {
+  grid-area: Image1;
+  aspect-ratio: 366/487;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 640px) {
+  section.summer_two div.container div.description img.first {
+    aspect-ratio: 159/217;
+  }
+}
+section.summer_two div.container div.description img.second {
+  grid-area: Image2;
+  aspect-ratio: 366/487;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 640px) {
+  section.summer_two div.container div.description img.second {
+    aspect-ratio: 159/217;
+  }
+}
+section.summer_two div.container div.description span.text {
+  grid-area: Text;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.description span.text {
+    font-size: 15px;
+  }
+}
+section.summer_two div.container div.description div.swiper {
+  grid-area: Swiper;
+}
+section.summer_two div.container div.description2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "Swiper Swiper Image1 Text" "Swiper Swiper . .";
+  grid-gap: 30px 24px;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.description2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "Image1" "Text" "Swiper";
+    grid-gap: 30px 16px;
+  }
+}
+section.summer_two div.container div.description2 img.first {
+  grid-area: Image1;
+  aspect-ratio: 366/487;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.description2 img.first {
+    aspect-ratio: 335/217;
+  }
+}
+section.summer_two div.container div.description2 span.text {
+  grid-area: Text;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+  align-self: end;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.description2 span.text {
+    font-size: 15px;
+  }
+}
+section.summer_two div.container div.description2 div.swiper {
+  grid-area: Swiper;
+}
+section.summer_two div.container div.swiper {
+  aspect-ratio: 756/800;
+  width: 100%;
+}
+@media (max-width: 640px) {
+  section.summer_two div.container div.swiper {
+    aspect-ratio: 335/560;
+  }
+}
+section.summer_two div.container div.swiper div.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+section.summer_two div.container div.swiper div.swiper-slide img {
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.summer_two div.container div.swiper div.swiper-pagination {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-gap: 8px;
+  right: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+section.summer_two div.container div.swiper div.swiper-pagination span.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  margin: unset;
+  opacity: 1;
+}
+section.summer_two div.container div.swiper div.swiper-pagination span.swiper-pagination-bullet-active {
+  background-color: #C6D50A;
+}
+section.summer_two div.container div.products {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-areas: "Product1 Video Video Product2";
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.products {
+    grid-template-areas: "Product1 Product2" "Video Video";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  section.summer_two div.container div.products {
+    grid-template-areas: "Product1" "Video" "Product2";
+    grid-template-columns: 1fr;
+  }
+}
+section.summer_two div.container div.products div.video {
+  grid-area: Video;
+  position: relative;
+}
+section.summer_two div.container div.products div.video video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  aspect-ratio: 756/800;
+  width: 100%;
+}
+@media (max-width: 640px) {
+  section.summer_two div.container div.products div.video video {
+    aspect-ratio: 335/560;
+  }
+}
+section.summer_two div.container div.products div.video video::-webkit-media-controls {
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+section.summer_two div.container div.products div.video video:hover::-webkit-media-controls {
+  opacity: 1;
+}
+section.summer_two div.container div.products div.video div.play {
+  cursor: pointer;
+}
+section.summer_two div.container div.products div.video div.play div.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+section.summer_two div.container div.products div.video div.play div.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section.summer_two div.container div.products div.video div.play.played div.icon {
+  display: none;
+}
+section.summer_two div.container div.products a.capsule_product {
+  display: grid;
+  grid-gap: 15px;
+}
+section.summer_two div.container div.products a.capsule_product img {
+  aspect-ratio: 366/487;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  section.summer_two div.container div.products a.capsule_product img {
+    aspect-ratio: 335/419;
+  }
+}
+section.summer_two div.container div.products a.capsule_product div.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+}
+section.summer_two div.container div.products a.capsule_product div.text strong {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  color: #000;
+}
+section.summer_two div.container div.products a.capsule_product div.text span.price {
+  font-family: Druk;
+  grid-area: Price;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  color: #000;
+}
+section.summer_two div.container div.products a.capsule_product:first-child {
+  grid-area: Product1;
+}
+section.summer_two div.container div.products a.capsule_product:last-child {
+  grid-area: Product2;
+}
+
+section.summer_three {
+  margin-top: 120px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.summer_three {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+section.summer_three div.container {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+}
+@media (max-width: 960px) {
+  section.summer_three div.container {
+    grid-gap: 30px;
+  }
+}
+section.summer_three div.container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.summer_three div.container div.video {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "Title Video Video Video" "Text Video Video Video";
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px 24px;
+}
+@media (max-width: 1280px) {
+  section.summer_three div.container div.video {
+    grid-template-areas: "Title Video Video" "Text Video Video";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 960px) {
+  section.summer_three div.container div.video {
+    grid-template-areas: "Title" "Video" "Text";
+    grid-template-columns: 1fr;
+  }
+}
+section.summer_three div.container div.video div.player {
+  grid-area: Video;
+  position: relative;
+}
+section.summer_three div.container div.video div.player video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  aspect-ratio: 1146/700;
+  width: 100%;
+}
+@media (max-width: 640px) {
+  section.summer_three div.container div.video div.player video {
+    aspect-ratio: 335/217;
+  }
+}
+section.summer_three div.container div.video div.player video::-webkit-media-controls {
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+section.summer_three div.container div.video div.player video:hover::-webkit-media-controls {
+  opacity: 1;
+}
+section.summer_three div.container div.video div.player div.play {
+  cursor: pointer;
+}
+section.summer_three div.container div.video div.player div.play div.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+section.summer_three div.container div.video div.player div.play div.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section.summer_three div.container div.video div.player div.play.played div.icon {
+  display: none;
+}
+section.summer_three div.container div.video h2 {
+  grid-area: Title;
+  margin-top: -0.25em;
+}
+section.summer_three div.container div.video span {
+  grid-area: Text;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+  align-self: end;
+}
+@media (max-width: 960px) {
+  section.summer_three div.container div.video span {
+    font-size: 15px;
+  }
+}
+section.summer_three div.container div.description {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "Image1 Image2 Image2 Text";
+  grid-gap: 40px 24px;
+}
+@media (max-width: 1280px) {
+  section.summer_three div.container div.description {
+    grid-template-areas: "Image1 Image2 Text";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 960px) {
+  section.summer_three div.container div.description {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "Image1 Image2" "Text Text";
+    grid-gap: 30px 16px;
+  }
+}
+section.summer_three div.container div.description img.first {
+  grid-area: Image1;
+  aspect-ratio: 366/487;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 640px) {
+  section.summer_three div.container div.description img.first {
+    aspect-ratio: 159/217;
+  }
+}
+section.summer_three div.container div.description img.second {
+  grid-area: Image2;
+  aspect-ratio: 755/487;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 1280px) {
+  section.summer_three div.container div.description img.second {
+    aspect-ratio: 366/487;
+  }
+}
+@media (max-width: 640px) {
+  section.summer_three div.container div.description img.second {
+    aspect-ratio: 159/217;
+  }
+}
+section.summer_three div.container div.description span {
+  grid-area: Text;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+}
+@media (max-width: 960px) {
+  section.summer_three div.container div.description span {
+    font-size: 15px;
+  }
+}
+section.summer_three div.container div.products {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: ". . Text ." "Image Image Product1 Product2";
+  grid-gap: 24px;
+}
+@media (max-width: 1280px) {
+  section.summer_three div.container div.products {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". Text ." "Image Product1 Product2";
+  }
+}
+@media (max-width: 960px) {
+  section.summer_three div.container div.products {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "Text Image" "Product1 Product2";
+  }
+}
+@media (max-width: 640px) {
+  section.summer_three div.container div.products {
+    grid-template-columns: 1fr;
+    grid-template-areas: "Image" "Text" "Product1" "Product2";
+  }
+}
+section.summer_three div.container div.products span.text {
+  grid-area: Text;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+}
+@media (max-width: 960px) {
+  section.summer_three div.container div.products span.text {
+    font-size: 15px;
+    -ms-flex-item-align: end;
+        align-self: end;
+  }
+}
+@media (max-width: 640px) {
+  section.summer_three div.container div.products span.text {
+    grid-column: auto;
+  }
+}
+section.summer_three div.container div.products img.image {
+  grid-area: Image;
+  width: 100%;
+  aspect-ratio: 756/800;
+}
+@media (max-width: 640px) {
+  section.summer_three div.container div.products img.image {
+    aspect-ratio: 335/560;
+  }
+}
+section.summer_three div.container div.products a.capsule_product {
+  display: grid;
+  grid-gap: 15px;
+}
+section.summer_three div.container div.products a.capsule_product img {
+  aspect-ratio: 366/487;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  section.summer_three div.container div.products a.capsule_product img {
+    aspect-ratio: 335/419;
+  }
+}
+section.summer_three div.container div.products a.capsule_product div.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+}
+section.summer_three div.container div.products a.capsule_product div.text strong {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  color: #000;
+}
+section.summer_three div.container div.products a.capsule_product div.text span.price {
+  font-family: Druk;
+  grid-area: Price;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  color: #000;
+}
+section.summer_three div.container div.products a.capsule_product:nth-last-child(1) {
+  grid-area: Product2;
+}
+section.summer_three div.container div.products a.capsule_product:nth-last-child(2) {
+  grid-area: Product1;
+}
+section.summer_three div.container button {
+  justify-self: center;
+}/*# sourceMappingURL=capsul2.css.map */

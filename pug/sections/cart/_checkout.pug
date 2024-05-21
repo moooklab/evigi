@@ -1,0 +1,67 @@
+section.checkout
+    form.steps
+        h2 Оформление заказа
+
+        div.steps
+
+            div.first
+                div.name
+                    span 1.
+                    span Выберите страну и регион для доставки
+                +select('select_country', 'Россия', 'Румыния', 'Сингапур', 'Сербия', 'Турция', 'Россия', 'Румыния', 'Сингапур', 'Сербия', 'Турция', 'Россия', 'Румыния', 'Сингапур', 'Сербия', 'Турция')
+                input(type="text", name="city", placeholder="Местоположение", required)
+                span.note #[b *] Введите название города
+            
+            div.second
+                div.name
+                    span 2.
+                    span Выберите способ доставки
+                div.radios
+                    label.radio
+                        input(type="radio", name="delivery", checked)
+                        div.text
+                            strong Доставка в пункт самовывоза
+                            span Удобный для вас пункт самовывоза, стоимость и условия доставки будут согласованы с вами менеджером магазина при подтверждении заказа.
+                    label.radio
+                        input(type="radio", name="delivery")
+                        div.text
+                            strong Доставка курьером
+                            span Курьерская доставка по Москве и МО – бесплатно в случае покупки. Стоимость и условия доставки будут согласованы с вами менеджером магазина при подтверждении заказа.
+
+            div.third
+                div.name
+                    span 3. 
+                    span Контактные данные
+                input(type="text", name="name", placeholder="Ф.И.О*", required)
+                input(type="tel", name="phone", placeholder="Телефон*", required)
+                input(type="email", name="email", placeholder="Email*", required)
+                textarea(name="comment", placeholder="Комментарий к заказу", rows="1")
+                label.checkbox
+                    input(type="checkbox", name="policy")
+                    span Нажимая кнопку, я даю свое #[a(href="index.html") согласие на обработку моих персональных данных], в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ
+                
+        div.total
+            h3 Ваш заказ
+            
+            div.table
+                div.row
+                    span Товаров на:
+                    div.divide
+                    div.price
+                        span.old 34 000 Р.
+                        span.current 37 000₽
+                div.row
+                    strong Ваша скидка
+                    div.divide
+                    span.current 18 500₽
+            
+            span.note Стоимостьи условия доставки будут согласованы с Вами менеджером магазина при подтверждении заказа
+            
+            div.result
+                span Итого:
+                strong 37 000₽
+
+        button: pre Оформить заказ
+
+
+

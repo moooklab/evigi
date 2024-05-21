@@ -1,0 +1,85 @@
+section.main
+    background-color: #C6D50A
+    height: calc(100vh - 95px)
+    padding-bottom: 52px
+    min-height: 800px
+    +screen(m)
+        min-height: unset
+        padding-bottom: 32px
+    +screen(s)
+        height: calc(100vh - 65px)
+
+    div.container
+        position: relative
+        grid-column: breakout
+        +screen(s)
+            &::after
+                content: ''
+                display: block
+                width: 20px
+                height: 65px
+                position: absolute
+                top: 0
+                left: 100%
+                background-color: black
+
+    div.text
+        display: grid
+        align-content: center
+        justify-items: center
+        position: relative
+        text-align: center
+        height: 100%
+        z-index: 2
+        color: white
+        padding: 60px 20px
+        padding-top: 100px
+        &::after
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background-color: rgba(0,0,0,.2)
+            z-index: -1
+
+        h1
+            margin-bottom: 15px
+            +screen(m)
+                font-size: 100px
+                line-height: 100%
+                margin-bottom: 10px
+                color: #fff
+
+        span
+            font-weight: 400
+            font-size: 30px
+            color: #fff
+            margin-bottom: 15px
+            +screen(m)
+                margin-bottom: 20px
+
+        p
+            font-weight: 400
+            font-size: 30px
+            line-height: 100%
+            color: #fff
+            max-width: 1238px
+            margin-bottom: 60px
+            +screen(m)
+                font-size: 15px
+                line-height: 120%
+                margin-bottom: 25px
+
+    img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center center
+        z-index: 1
+
+

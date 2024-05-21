@@ -1,0 +1,38 @@
+section.products
+    margin-bottom: 58px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 24px
+        margin-bottom: 33px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 30px 16px
+
+    button.more
+        justify-self: center
+        margin-bottom: 39px
+
+    a.product
+        &:nth-child(4)
+            grid-column: 1 / 3
+            div.swiper
+                aspect-ratio: 1000 / 666
+            +screen(m)
+                grid-column: auto
+                div.swiper
+                    aspect-ratio: 366 / 500
+
+        &:nth-child(10)
+            grid-column: 2 / 4
+            div.swiper
+                aspect-ratio: 1000 / 666
+            +screen(m)
+                grid-column: auto
+                div.swiper
+                    aspect-ratio: 366 / 500
+
+        +screen(s)
+            &:nth-child(5n - 4)
+                grid-column: 1 / 3

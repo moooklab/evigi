@@ -1,0 +1,118 @@
+section.main
+    div.container
+
+        div.gallery
+            div.swiper.product
+                div.swiper-wrapper
+                    div.swiper-slide: img(src="/images/webp/1.webp", alt="")
+                    div.swiper-slide: img(src="/images/webp/2.webp", alt="")
+                    div.swiper-slide: img(src="/images/webp/3.webp", alt="")
+                    div.swiper-slide: img(src="/images/webp/4.webp", alt="")
+                    div.swiper-slide: img(src="/images/webp/5.webp", alt="")
+                div.swiper-pagination
+
+        div.title
+            div(onclick="this.classList.toggle('active')").favourite
+                include ../../../images/svg/favourite.svg
+
+            h1 Шелковые туфли Sersi
+
+            span.article #2345
+
+        form(action="cart.html", method="get")
+            div.price
+                span.current 38 500 Р.
+                span.old 34 000 Р.
+                a(data-modal-target="stock").link Уточнить наличие в магазинах
+
+            div.accordions
+                div.accordion.open
+                    div.accordion_caption
+                        strong Описание
+                        div.arrow
+                            include ../../../images/svg/select_arrow.svg
+                    div.accordion_content
+                        div.accordion_overflow
+                            div.accordion_wrap
+                                div.description
+                                    span Лаконичные Мэри Джейн — актуальная и универсальная пара, которую дизайнеры выполнили из натуральной гладкой кожи черного цвета. Стильный ремешок t-strap на подъеме, комфортная гибкая подошва без каблука и закругленная носочная часть — отличительные черты модели. Ремешок регулируется по размеру и надежно фиксирует ногу. 
+                                    span Туфли легко впишутся в любой гардероб и станут модной альтернативой лоферам или балеткам.
+                                    strong Характеристики
+                                    table
+                                        tbody
+                                            tr
+                                                td Сезон
+                                                td Лето
+                                            tr
+                                                td Материал
+                                                td Кожа
+                div.accordion.open
+                    div.accordion_caption
+                        strong Размер
+                        div.arrow
+                            include ../../../images/svg/select_arrow.svg
+                    div.accordion_content
+                        div.accordion_overflow
+                            div.accordion_wrap
+                                div.sizes
+                                    label.radio
+                                        input(type="radio", name="size", value="36", required)
+                                        span 36
+                                    label.radio
+                                        input(type="radio", name="size", value="36", disabled)
+                                        span 37
+                                    label.radio
+                                        input(type="radio", name="size", value="36")
+                                        span 38
+                                    label.radio
+                                        input(type="radio", name="size", value="36")
+                                        span 39
+                                a(data-modal-target="receipt").link Подписаться на размер
+                div.accordion.open
+                    div.accordion_caption
+                        strong Цвет
+                        div.arrow
+                            include ../../../images/svg/select_arrow.svg
+                    div.accordion_content
+                        div.accordion_overflow
+                            div.accordion_wrap
+                                div.colors
+                                    label.radio
+                                        input(type="radio", name="color", value="black", required)
+                                        span(style="background-color: black")
+                                    label.radio
+                                        input(type="radio", name="color", value="white")
+                                        span(style="background-color: white; border: 1px solid #D9D9D9")
+                                    label.radio
+                                        input(type="radio", name="color", value="gray")
+                                        span(style="background-color: #DFE2E7")
+                div.accordion.open
+                    div.accordion_caption
+                        strong Отзывы
+                        div.arrow
+                            include ../../../images/svg/select_arrow.svg
+                    div.accordion_content
+                        div.accordion_overflow
+                            div.accordion_wrap
+                                div.reviews
+                                    div.swiper.reviews
+                                        div.swiper-wrapper
+                                            - for( x = 1; x <= 6; x++ )
+                                                div.swiper-slide
+                                                    div.review
+                                                        strong Анна 
+                                                        i 03.19.2024
+                                                        span Модель сидит идеально, очень удобная колодка, элегантные туфли.Осталась очень довольна покупкой, обязательно буду приобретать другие модели. Также порекомендую друзьям и близким
+                                    div.swiper-navigation
+                                        div.arrow
+                                            include ../../../images/svg/pagination_arrow.svg
+                                        div.arrow
+                                            include ../../../images/svg/pagination_arrow.svg
+                                a(data-modal-target="review").link + Оставить отзыв
+
+            button
+                pre В корзину
+                include ../../../images/svg/button_plus.svg
+
+
+

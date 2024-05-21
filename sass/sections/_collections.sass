@@ -1,0 +1,25 @@
+section.collections
+    margin-bottom: 58px
+    +screen(s)
+        margin-bottom: 27px
+
+    div.swiper
+        width: 100%
+        min-width: 0
+
+    div.swiper-navigation
+        display: none
+        justify-content: space-between
+        width: 100%
+        position: absolute
+        bottom: 110px
+        z-index: 1
+        +screen(s)
+            display: flex
+
+        div.arrow
+            opacity: 0.2
+            &:first-child
+                transform: scaleX(-1)
+            &:hover
+                opacity: 1

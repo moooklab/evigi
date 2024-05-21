@@ -1,0 +1,128 @@
+section.main {
+  margin-top: 160px;
+}
+section.main div.title {
+  display: grid;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #D1D1D1;
+  padding-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.main div.title {
+    text-align: left;
+    padding-bottom: 40px;
+  }
+}
+section.main div.title h1 {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 30px;
+}
+@media (max-width: 960px) {
+  section.main div.title h1 {
+    font-size: 60px;
+    line-height: 110%;
+    margin-bottom: 20px;
+  }
+}
+section.main div.title span {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  color: #000;
+  max-width: 1084px;
+}
+@media (max-width: 960px) {
+  section.main div.title span {
+    font-size: 18px;
+  }
+}
+section.main div.list {
+  display: grid;
+  grid-gap: 60px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+@media (max-width: 960px) {
+  section.main div.list {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    grid-gap: 40px;
+  }
+}
+section.main div.collection {
+  display: grid;
+  grid-template-areas: "Image Image" "Title Text" "Button Text";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content;
+  grid-template-rows: max-content max-content max-content;
+  grid-gap: 20px;
+}
+@media (max-width: 960px) {
+  section.main div.collection {
+    grid-template-areas: "Title" "Image" "Text" "Button";
+    grid-template-columns: 1fr;
+  }
+}
+section.main div.collection:not(:last-child) {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #D1D1D1;
+}
+@media (max-width: 960px) {
+  section.main div.collection:not(:last-child) {
+    padding-bottom: 40px;
+  }
+}
+section.main div.collection img {
+  grid-area: Image;
+  width: 100%;
+  aspect-ratio: 1536/784;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 480px) {
+  section.main div.collection img {
+    aspect-ratio: 335/560;
+  }
+}
+section.main div.collection h2 {
+  grid-area: Title;
+}
+@media (max-width: 960px) {
+  section.main div.collection h2 {
+    margin-top: -0.4em;
+  }
+}
+section.main div.collection div.text {
+  grid-area: Text;
+  max-width: 476px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 118%;
+  color: #6c6c6c;
+  margin-top: 10px;
+}
+@media (max-width: 960px) {
+  section.main div.collection div.text {
+    font-size: 15px;
+    margin-top: unset;
+  }
+}
+section.main div.collection a.button {
+  grid-area: Button;
+  justify-self: start;
+  margin-top: 10px;
+}
+@media (max-width: 960px) {
+  section.main div.collection a.button {
+    justify-self: center;
+  }
+}/*# sourceMappingURL=collection.css.map */

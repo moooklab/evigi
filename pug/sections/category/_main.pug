@@ -1,0 +1,70 @@
+include ../../common/_mixins.pug
+
+section.main
+    div.container
+
+        div.title
+            h1 Обувь
+            strong Женская обувь #[span 824]
+
+        form.filter
+
+            div.filter
+                +select('select_category', 'Категория', 'Балетки', 'Босоножки', 'Ботильоны', 'Ботинки', 'Казаки', 'Кроссовки и кеды', 'Сабо и мюли', 'Сандалии', 'Сапоги', 'Туфли')
+                +select('select_size', 'Размер', '35', '36', '37', '38', '39', '40', '41')
+                +select('select_color', 'Цвет', 'Бежевый', 'Белый', 'Молочный', 'Рептилия', 'Красный', 'Фуксия', 'Цветные', 'Черный', 'Фиолетовый', 'Зеленый', 'Синий', 'Охра', 'Мультиколор', 'Серый', 'Черный/Белый', 'Бежевый/Черный', 'Белый/Черный', 'Бежевый/Красный', 'Каппучино', 'Молочный', 'Серебристый', 'Золотой', 'Лайм', 'Леопардовый', 'Оранжевый', 'Серый/питон', 'Терракот', 'Хаки')
+                +select('select_season', 'Сезон', 'Зима', 'Лето', 'Мультисезон', 'Демисезон')
+                button(onclick="event.preventDefault(); this.classList.toggle('active'); this.parentNode.nextElementSibling.classList.toggle('active')")
+                    pre Расширенный фильтр
+                    include ../../../images/svg/select_arrow.svg
+
+            div.extend_filter
+                div.wrap
+                    strong Расширенный фильтр
+                    div.selects
+                        +select('select_material', 'Материал', 'Один', 'Два', 'Три', 'Четыре', 'Пять')
+                        +select('select_heel', 'Каблук', 'Один', 'Два', 'Три', 'Четыре', 'Пять')
+                        +select('select_style', 'Стиль', 'Один', 'Два', 'Три', 'Четыре', 'Пять')
+                        +select('select_available', 'Наличие', 'В наличии', 'Нет в наличии')
+                        +select('select_price', 'Цена', 'от 10 000Р', 'от 25 000Р', 'от 50 000Р')
+                        button
+                            pre Применить
+                            include ../../../images/svg/button_tick.svg
+            div.tags
+                div.tag.hidden.select_category
+                    span Категория
+                    div.cross
+                        include ../../../images/svg/cross.svg
+                div.tag.hidden.select_size
+                    span Размер
+                    div.cross
+                        include ../../../images/svg/cross.svg
+                div.tag.hidden.select_color
+                    span Цвет
+                    div.cross
+                        include ../../../images/svg/cross.svg
+                div.tag.hidden.select_season
+                    span Сезон
+                    div.cross
+                        include ../../../images/svg/cross.svg
+                div.tag.hidden.select_material
+                    span Материал
+                    div.cross
+                        include ../../../images/svg/cross.svg
+                div.tag.hidden.select_heel
+                    span Каблук
+                    div.cross
+                        include ../../../images/svg/cross.svg
+                div.tag.hidden.select_style
+                    span Стиль
+                    div.cross
+                        include ../../../images/svg/cross.svg
+                div.tag.hidden.select_available
+                    span Наличие
+                    div.cross
+                        include ../../../images/svg/cross.svg
+                div.tag.hidden.select_price
+                    span Цена
+                    div.cross
+                        include ../../../images/svg/cross.svg
+

@@ -1,0 +1,17 @@
+dialog(data-modal-name="receipt")
+    div.container
+        div(data-modal-close).cross
+            include ../../../images/svg/cross.svg
+        div.info
+            include ../../../images/svg/info.svg
+        div.text
+            h3 Узнать о поступлении
+            span Пожалуйста, оставьте Ваши контактные данные.Как только размер появится на сайте, мы направим Вам уведомление по номеру телефона!
+        form
+            input(type="tel", name="", placeholder="Телефон")
+            button
+                pre Подписаться
+                include ../../../images/svg/button_tick.svg
+            label.checkbox
+                input(type="checkbox", name="policy", required)
+                span Нажимая кнопку «Подписаться на размер», я даю свое #[a(href="index.html") согласие на обработку моих персональных данных], в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ

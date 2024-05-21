@@ -1,0 +1,103 @@
+footer
+    padding-top: 53px
+    background-color: black
+    color: white
+    +screen(l)
+        padding-top: unset
+        padding-bottom: 40px
+
+    div.container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        +screen(l)
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 60px
+            grid-template-areas: 'Logotype Logotype' 'First Second' 'Socials MWI'
+        +screen(s)
+            grid-gap: 60px 45px
+
+    span.copyright
+        grid-area: Copyright
+        text-transform: uppercase
+        font-size: 16px
+        +screen(l)
+            display: none
+
+    a.mwi
+        grid-area: MWI
+        margin-right: -30px
+        +screen(s)
+            margin-top: -10px
+
+    div.socials
+        grid-area: Socials
+        display: grid
+        align-items: center
+        grid-auto-flow: column
+        grid-gap: 20px
+        width: max-content
+        +screen(l)
+            justify-self: end
+        +screen(s)
+            grid-gap: 14px
+            margin-top: -10px
+            margin-right: 15px
+
+    a.logotype
+        grid-area: Logotype
+        display: block
+        padding: 56px 47px 40px 47px
+        background-color: white
+        transition: all .2s
+        margin-top: 25px
+        +screen(l)
+            margin-top: unset
+            justify-self: center
+        img
+            width: 189px
+            height: 65px
+            transition: all .2s
+
+    menu
+        display: grid
+        grid-auto-flow: column
+        grid-gap: 60px
+        font-weight: 400
+        font-size: 16px
+        text-transform: uppercase
+        margin-top: -3px
+        +screen(1400px)
+            grid-gap: 20px
+        +screen(l)
+            grid-gap: 60px
+        +screen(s)
+            width: 100px
+            margin-top: 10px
+            grid-auto-flow: row
+            grid-gap: 20px
+
+        &.first
+            grid-area: First
+            +screen(l)
+                justify-self: end
+            
+        &.second
+            grid-area: Second
+            +screen(l)
+                justify-self: start
+
+    a.unknown
+        +screen(l)
+            position: absolute
+            top: 200px
+            left: 50%
+            transform: translateX(-50%)
+        svg
+            +screen(l)
+                width: 131px
+                height: 137px
+                opacity: 0.1
+            path
+                fill: white

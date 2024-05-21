@@ -1,0 +1,20 @@
+extends common/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/pages.css")
+
+block content
+    section.pages
+        div.container
+            a(href="index.html", target="blank") Главная
+            a(href="category.html", target="blank") Категория
+            a(href="product.html", target="blank") Карточка
+            a(href="collection.html", target="blank") Коллекции
+            a(href="capsul1.html", target="blank") Капсула 1
+            a(href="capsul2.html", target="blank") Капсула 2
+            a(href="cart.html", target="blank") Корзина
+
+            a(data-modal-target="receipt") Попап - Наличие размера
+            a(data-modal-target="review") Попап - Новый отзыв
+            a(data-modal-target="stock") Попап - Наличие товара
+            

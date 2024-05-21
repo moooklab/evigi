@@ -1,0 +1,85 @@
+mixin collection(image, title, text)
+    a(href="collection.html").collection
+        img(src=image, alt="")
+        strong= title 
+        span= text
+        button: pre В каталог
+
+mixin category(image, title)
+    a(href="category.html").category
+        img(src=image, alt="")
+        strong= title
+
+mixin product(image, title, text, price, tag, colors, sizes)
+    a(href="product.html").product&attributes(attributes)
+        div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
+            include ../../images/svg/favourite.svg
+        div.swiper
+            div.swiper-wrapper
+                div.swiper-slide
+                    img(src=image, alt="")
+                div.swiper-slide
+                    img(src=image, alt="")
+                div.swiper-slide
+                    img(src=image, alt="")
+            div.swiper-pagination
+        div.title
+            div
+                strong= title
+                if text
+                    span= text
+            if tag
+                div.tag= tag
+        div.options
+            div.sizes
+                if sizes >= 1
+                    span 36
+                if sizes >= 2
+                    span.hidden 37
+                if sizes >= 3
+                    span 38
+                if sizes >= 4
+                    span 39
+                if sizes >= 5
+                    span 40
+            div.colors
+                if colors >= 1
+                    span(style="background-color: #ffffff; border: 1px solid #D9D9D9")
+                if colors >= 2
+                    span(style="background-color: #000000")
+                if colors >= 3
+                    span(style="background-color: #673715")
+                if colors >= 4
+                    span(style="background-color: #DFE2E7")
+            span.price= price
+
+mixin select(name, title, ...items)
+    fieldset.select(class=name)
+        div(tabindex="0").select_current
+            input(type="radio", id=name, value=title, name=name, checked)
+            span= title
+            each item, index in items
+                //- - index == 0 ? checked = true : checked = false
+                input(type="radio", id=name + '_' + index, value=item, name=name)
+                span= item
+            div.arrow
+                include ../../images/svg/select_arrow.svg
+        div.select_list
+            each item, index in items
+                label(for=name + '_' + index)= item
+
+mixin pagination
+    div.pagination
+        div.prev
+            include ../../images/svg/pagination_arrow.svg
+        div.pages
+            span 1
+            span 2
+            span 3
+            span ...
+            span 10
+            span 20
+        div.next
+            include ../../images/svg/pagination_arrow.svg
+
+

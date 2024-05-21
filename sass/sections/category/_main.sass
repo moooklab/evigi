@@ -1,0 +1,144 @@
+section.main
+    margin-top: 56px
+    margin-bottom: 84px
+
+    div.title
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-end
+        gap: 10px 78px
+        margin-bottom: 24px
+        +screen(m)
+            gap: 10px 36px
+
+        h1
+            font-weight: 700
+            font-size: 80px
+            line-height: 125%
+            text-transform: uppercase
+            +screen(m)
+                font-size: 60px
+        
+        strong
+            font-weight: 400
+            font-size: 30px
+            line-height: 100%
+            text-transform: uppercase
+            padding-bottom: 11px
+            +screen(m)
+                font-size: 18px
+            span
+                color: #c6d50a
+    
+    div.filter
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-gap: 24px
+        +screen(l)
+            grid-template-columns: repeat(4, 1fr)
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+
+        button
+            white-space: nowrap
+            padding-left: 16px
+            padding-right: 16px
+            border: 1px solid #d9d9dc
+            background-color: transparent
+            box-shadow: unset
+            +screen(s)
+                grid-column: 1 / 3
+            &:hover
+                border-color: #C6D50A
+                svg path
+                    stroke: #C6D50A
+
+            &.active
+                svg
+                    transform: rotate(180deg)
+
+        fieldset.select_category
+            grid-column: 1 / 3
+        fieldset.select_season
+            +screen(s)
+                grid-column: 1 / 3
+
+    div.extend_filter
+        display: grid
+        grid-template-rows: 0fr
+        transition: all .2s
+        div.wrap
+            overflow: hidden
+        strong
+            display: block
+            font-weight: 400
+            font-size: 30px
+            line-height: 100%
+            color: black
+            margin-top: 40px
+            margin-bottom: 16px
+        div.selects
+            display: grid
+            grid-template-columns: repeat(6, 1fr)
+            grid-gap: 24px
+            +screen(l)
+                grid-template-columns: repeat(4, 1fr)
+            +screen(m)
+                grid-template-columns: repeat(2, 1fr)
+
+            fieldset.select_material
+                +screen(s)
+                    grid-column: 1 / 3
+
+            button
+                display: grid
+                align-items: center
+                justify-content: center
+                grid-template-columns: max-content max-content
+                grid-gap: 10px
+                padding-left: 15px
+                padding-right: 15px
+                +screen(s)
+                    grid-column: 1 / 3
+
+        button
+            box-shadow: unset
+        &.active
+            grid-template-rows: 1fr
+            div.wrap
+                animation-name: extend_filter
+                animation-fill-mode: forwards
+                animation-duration: 0.5s
+
+    div.tags
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+        margin-top: 12px
+        div.tag
+            display: inline-grid
+            grid-template-columns: max-content max-content
+            grid-gap: 5px
+            border: 1px solid #d9d9dc
+            border-radius: 4px
+            padding: 6px
+            height: 28px
+            span
+                font-size: 12px
+                line-height: 100%
+                color: #6c6c6c
+            div.cross
+                line-height: 0
+            svg
+                cursor: pointer
+                path
+                    stroke: #6C6C6C
+            &.hidden
+                display: none
+
+    @keyframes extend_filter
+        0%
+            overflow: hidden
+        100%
+            overflow: visible
+                

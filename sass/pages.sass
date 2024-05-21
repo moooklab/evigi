@@ -1,0 +1,28 @@
+// Общее 
+@import common/_variables
+@import common/_mixins
+
+//Секции
+section.pages
+    padding-top: 120px
+    padding-bottom: 120px
+    min-height: calc(100vh - 239px - 95px)
+
+    div.container
+        display: grid
+        align-content: start
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 24px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(s)
+            grid-template-columns: 1fr
+
+    a
+        text-transform: uppercase
+        outline: 1px solid #d1d1d1
+        padding: 20px
+        &:hover
+            outline: unset
+            background-color: #C6D50A
+            color: black

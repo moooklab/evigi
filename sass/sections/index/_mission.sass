@@ -1,0 +1,77 @@
+section.mission
+    margin-bottom: 103px
+    +screen(s)
+        margin-bottom: 69px
+
+    div.container
+        display: grid
+        align-items: start
+        grid-template-areas: 'Image Title' 'Image Text'
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: max-content 1fr
+        grid-gap: 0 24px
+        +screen(s)
+            grid-template-areas: 'Title' 'Image' 'Text'
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3, max-content)
+
+    div.image
+        grid-area: Image
+        position: relative
+        height: 805px
+        +screen(s)
+            height: 361px
+            margin-bottom: 19px
+
+        img
+            position: absolute
+            top: 0
+            right: 0
+            height: 100%
+            aspect-ratio: 1145 / 805
+            object-fit: cover
+            object-position: center top
+            +screen(s)
+                right: -20px
+
+    h2
+        grid-area: Title
+        margin-top: 88px
+        margin-bottom: 75px
+        +screen(s)
+            margin-bottom: 32px
+            text-align: center
+            margin-top: unset
+
+    div.text
+        display: grid
+        grid-area: Text
+        padding-left: 6px
+
+        strong
+            display: block
+            font-weight: 400
+            font-size: 30px
+            line-height: 100%
+            color: #000
+            margin-bottom: 33px
+            text-transform: uppercase
+            +screen(s)
+                margin-bottom: 51px
+
+        span
+            display: block
+            font-size: 20px
+            line-height: 130%
+            color: #6c6c6c
+            max-width: 640px
+            & + span
+                margin-top: 26px
+
+        button
+            margin-top: 60px
+            justify-self: start
+            +screen(s)
+                margin-top: 54px
+                justify-self: center
+        

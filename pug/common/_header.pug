@@ -1,0 +1,119 @@
+include ../common/_mixins.pug
+
+header
+    div.container
+
+        a(onclick="headerOpen('menu')").menu
+            div.open
+                include ../../images/svg/menu.svg
+            div.close
+                include ../../images/svg/cross.svg
+
+        menu
+            a(onclick="headerOpen('catalog')").catalog
+                include ../../images/svg/menu.svg
+                span Каталог
+            a(href="index.html"): span О бренде
+
+            a(href="index.html").logotype
+                img(src="images/svg/logotype.svg", alt="")
+                
+            a(href="index.html"): span Покупателям
+            a(href="index.html"): span Контакты
+
+        div.personal
+            div(onclick="headerOpen('search')").search: include ../../images/svg/search.svg
+            div.favourite: include ../../images/svg/favourite.svg
+            div.sign: include ../../images/svg/sing.svg
+        
+        a(href="cart.html").cart
+            include ../../images/svg/cart.svg
+            div.count
+                span 2
+
+    section.search
+        div.parent_wrap
+            div.child_wrap
+                form
+                    div.search
+                        include ../../images/svg/search.svg
+                    input(type="search", name="search", placeholder="Поиск")
+                div.tags
+                    strong Часто ищут
+                    div.list
+                        a(href="index.html") казаки
+                        a(href="index.html") лоферы
+                        a(href="index.html") Туфли
+                        a(href="index.html") Кроссовки
+                div.products
+                    strong Популярные товары
+                    div.list
+                        +product('images/webp/1.webp', 'Ботинки Punti', 'Теплые модели обуви с мехом и утеплителями')
+                        +product('images/webp/2.webp', 'Сапоги', 'Новинки сезона осень-зима 23/24')
+                        +product('images/webp/3.webp', 'Кеды с мехом', 'Теплые модели обуви с мехом и утеплителями')
+                        +product('images/webp/4.webp', 'Кроссовки', 'Теплые модели обуви с мехом и утеплителями')
+
+    section.catalog
+        div.parent_wrap
+            div.child_wrap
+                ul.menu
+                    li: a(href="category.html" style="color: #C3C3C3") Все
+                    li(onclick="event.preventDefault(); this.parentNode.nextElementSibling.classList.toggle('active'); this.classList.toggle('active')")
+                        a(href="category.html") Обувь
+                            div.arrow
+                                include ../../images/svg/select_arrow.svg
+                    li: a(href="category.html") Новинки
+                    li: a(href="category.html") Хиты
+                    li: a(href="category.html") Распродажа
+                    li: a(href="category.html" style="color: #EB1461") Barbiecore
+                div.submenu
+                    div.submenu_wrap
+                        ul.submenu
+                            li: a(href="category.html") Босоножки
+                            li: a(href="category.html") Ботинки
+                            li: a(href="category.html") Казаки
+                            li: a(href="category.html") Сапоги
+                            li: a(href="category.html") Лоферы
+                            li: a(href="category.html") Полуботинки
+                            li: a(href="category.html") Балетки
+                            li: a(href="category.html") Ботильоны
+                            li: a(href="category.html") Ботфорты
+                            li: a(href="category.html") Кроссовки
+                            li: a(href="category.html") Туфли
+                            li: a(href="category.html") Пантолеты
+                            li: a(href="category.html") Сандали
+                            li: a(href="category.html") Угги
+                div.products
+                    +product('images/webp/63.webp', 'Ботинки Punti', '', '28 500 Р.', 'New')
+                    +product('images/webp/64.webp', 'Сапоги', '', '28 500 Р.', 'New')
+                    +product('images/webp/65.webp', 'Кеды с мехом', '', '28 500 Р.', 'New')
+
+    section.menu
+        div.parent_wrap
+            div.child_wrap
+                ul.menu
+                    li: a(href="category.html") Все
+                    li(onclick="this.classList.toggle('active')")
+                        a Обувь
+                            div.arrow
+                                include ../../images/svg/select_arrow.svg
+                        ul
+                            li: a(href="category.html") Босоножки
+                            li: a(href="category.html") Ботинки
+                            li: a(href="category.html") Казаки
+                            li: a(href="category.html") Сапоги
+                            li: a(href="category.html") Лоферы
+                            li: a(href="category.html") Полуботинки
+                            li: a(href="category.html") Балетки
+                            li: a(href="category.html") Ботильоны
+                            li: a(href="category.html") Ботфорты
+                            li: a(href="category.html") Кроссовки
+                            li: a(href="category.html") Туфли
+                            li: a(href="category.html") Пантолеты
+                            li: a(href="category.html") Сандали
+                            li: a(href="category.html") Угги
+                    li: a(href="category.html") Новинки
+                    li: a(href="category.html") Хиты
+                    li: a(href="category.html") Распродажа
+                    li: a(href="category.html" style="color: #EB1461") Barbiecore
+

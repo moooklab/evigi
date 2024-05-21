@@ -1,0 +1,12 @@
+extends common/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/index.css")
+
+block content
+    include sections/index/_main.pug
+    include sections/index/_collections.pug
+    include sections/_categories.pug
+    include sections/index/_compilation.pug
+    include sections/index/_collection.pug
+    include sections/index/_mission.pug

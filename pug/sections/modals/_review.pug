@@ -1,0 +1,15 @@
+dialog(data-modal-name="review")
+    div.container
+        div(data-modal-close).cross
+            include ../../../images/svg/cross.svg
+        div.text
+            h3 Оставьте отзыв
+            span Пожалуйста, оставьте Ваш отзыв о данном товаре. Расскажите о том, какие у вас впечатления после покупки.
+        form(action="product.html", method="get") 
+            input(type="text", name="name", placeholder="Имя", required)
+            textarea(name="review", rows="1", placeholder="Сообщение", required)
+            small Отзыв может содержать от 50 до 500 символов
+            button: pre Отправить
+            label.checkbox
+                input(type="checkbox", name="policy", required)
+                span Нажимая кнопку «Подписаться на размер», я даю свое #[a(href="index.html") согласие на обработку моих персональных данных], в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ

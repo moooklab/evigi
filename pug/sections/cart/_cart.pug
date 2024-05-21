@@ -1,0 +1,124 @@
+include ../../common/_mixins.pug
+
+section.cart
+    div.container
+
+        div.title
+            h2 Корзина
+
+            div.clear
+                span Очистить козину
+                include ../../../images/svg/cross.svg
+
+        div.products
+            strong Ваши товары
+
+            table
+                thead
+                    tr
+                        th Наименование
+                        th Размер
+                        th Количество
+                        th Цена
+                        th Сумма
+                        th
+                tbody
+                    tr.product
+                        td.name
+                            a(href="product.html").name
+                                img(src="images/webp/44.webp", alt="")
+                                div(data-title="Наименование").text
+                                    strong Кеды 
+                                    span Теплые модели обуви с мехом и утеплителями
+                        td(data-title="Размер").sizes
+                            div.sizes
+                                label.radio
+                                    input(type="radio", name="size", value="36", checked)
+                                    span 36
+                                label.radio
+                                    input(type="radio", name="size", value="36")
+                                    span 37
+                                label.radio
+                                    input(type="radio", name="size", value="36")
+                                    span 38
+                                label.radio
+                                    input(type="radio", name="size", value="36")
+                                    span 39
+                        td(data-title="Количество").quantity
+                            div.quantity
+                                div.minus
+                                    include ../../../images/svg/quantity_minus.svg
+                                input(type="number", name="quantity", value="1", min="1", max="1000")
+                                div.plus
+                                    include ../../../images/svg/quantity_plus.svg
+                        td(data-title="Цена").prices
+                            div.prices
+                                span.current 38 500 Р.
+                                span.old 34 000 Р.
+                        td(data-title="Сумма").amount
+                            div.amount
+                                strong 18 500 Р.
+                        td.delete
+                            div.delete
+                                include ../../../images/svg/cross.svg
+                    tr.categories
+                        td(colspan="6")
+                            div
+                                strong Может вы решились на покупку?
+                                div.list
+                                    +product('images/webp/45.webp', 'Ботинки Punti', 'Теплые модели обуви с мехом и утеплителями')
+                                    +product('images/webp/43.webp', 'Ботинки Punti', 'Теплые модели обуви с мехом и утеплителями')
+                                    +product('images/webp/46.webp', 'Ботинки Punti', 'Теплые модели обуви с мехом и утеплителями')
+                    tr.product
+                        td.name
+                            a(href="product.html").name
+                                img(src="images/webp/44.webp", alt="")
+                                div(data-title="Наименование").text
+                                    strong Туфли на каблуке 
+                                    span Теплые модели обуви с мехом и утеплителями
+                        td(data-title="Размер").sizes
+                            div.sizes
+                                label.radio
+                                    input(type="radio", name="size", value="36", checked)
+                                    span 36
+                                label.radio
+                                    input(type="radio", name="size", value="36")
+                                    span 37
+                                label.radio
+                                    input(type="radio", name="size", value="36")
+                                    span 38
+                                label.radio
+                                    input(type="radio", name="size", value="36")
+                                    span 39
+                        td(data-title="Количество").quantity
+                            div.quantity
+                                div.minus
+                                    include ../../../images/svg/quantity_minus.svg
+                                input(type="number", name="quantity", value="1", min="1", max="1000")
+                                div.plus
+                                    include ../../../images/svg/quantity_plus.svg
+                        td(data-title="Цена").prices
+                            div.prices
+                                span.current 38 500 Р.
+                                span.old 34 000 Р.
+                        td(data-title="Сумма").amount
+                            div.amount
+                                strong 18 500 Р.
+                        td.delete
+                            div.delete
+                                include ../../../images/svg/cross.svg
+                    tr.promo
+                        td(colspan="4").code
+                            div
+                                form
+                                    input(type="text", name="promo", placeholder="Промокод на скидку")
+                                    button: pre Активировать
+                                span Стоимость и условия доставки будут согласованы с Вами менеджером магазина при подтверждении заказа
+                        td.amount
+                            div
+                                span Итого
+                                strong 37 000 Р.
+                        td
+
+
+

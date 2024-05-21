@@ -1,0 +1,17 @@
+include ../../common/_mixins.pug
+
+section.collections
+    div.container
+        div.swiper
+            div.swiper-wrapper
+                div.swiper-slide
+                    +collection('images/webp/26.webp', 'Зима 2023’', 'Новинки сезона осень-зима 23/24')
+                div.swiper-slide
+                    +collection('images/webp/48.webp', 'Шелковая коллекция', 'Новинки сезона осень-зима 23/24')
+                div.swiper-slide
+                    +collection('images/webp/44.webp', 'Новинки', 'Теплые модели обуви с мехом и утеплителями')
+            div.swiper-navigation
+                div.arrow
+                    include ../../../images/svg/pagination_arrow.svg
+                div.arrow
+                    include ../../../images/svg/pagination_arrow.svg

@@ -1,0 +1,182 @@
+section.summer_one
+    margin-top: 120px
+    margin-bottom: 120px
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 70px
+
+    div.container
+        display: grid
+        align-items: start
+        grid-template-areas: 'Title' 'Video' 'Text' 'Products'
+        grid-template-columns: 1fr
+        grid-gap: 50px 24px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-template-areas: 'Title' 'Video' 'Text' 'Products'
+            grid-gap: 30px
+
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            object-position: center center
+
+        div.title
+            grid-area: Title
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            +screen(m)
+                grid-template-columns: 1fr
+
+            span
+                font-weight: 400
+                font-size: 24px
+                line-height: 117%
+                color: #000
+                +screen(m)
+                    font-size: 18px
+
+        div.description
+            grid-area:  Text
+            display: grid
+            align-items: end
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-areas: 'Image1 Image2 Text'
+            grid-gap: 40px 24px
+            +screen(m)
+                grid-template-columns: repeat(2, 1fr)
+                grid-template-areas: 'Image1 Image2' 'Text Text'
+                grid-gap: 30px 16px
+
+            img.first
+                grid-area: Image1
+                aspect-ratio: 496 / 680
+                width: 100%
+                object-fit: cover
+                object-position: center center
+            img.second
+                grid-area: Image2
+                aspect-ratio: 496 / 680
+                width: 100%
+                object-fit: cover
+                object-position: center center
+            span
+                grid-area: Text
+                font-weight: 400
+                font-size: 17px
+                line-height: 118%
+                color: #6c6c6c
+                +screen(m)
+                    font-size: 15px
+
+        div.video
+            grid-area: Video
+            display: grid
+            align-items: start
+            width: 100%
+            grid-template-columns: repeat(4, 1fr)
+            grid-gap: 30px 24px
+            +screen(m)
+                grid-template-columns: 1fr
+
+            div.player
+                position: relative
+                grid-column: 2 / 5
+                +screen(m)
+                    grid-column: auto
+                video
+                    object-fit: cover
+                    object-position: center center
+                    aspect-ratio: 1148 / 680
+                    width: 100%
+                    +screen(s)
+                        aspect-ratio: 335 / 217
+                    &::-webkit-media-controls
+                        opacity: 0
+                        transition: all .2s
+                    &:hover
+                        &::-webkit-media-controls
+                            opacity: 1
+                div.play
+                    cursor: pointer
+                    div.icon
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        width: 80px
+                        height: 80px
+                        transform: translate(-50%, -50%)
+                        z-index: 2
+                    div.overlay
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        z-index: 1
+                    &.played
+                        div.icon
+                            display: none
+
+            span
+                font-weight: 400
+                font-size: 17px
+                line-height: 118%
+                color: #6c6c6c
+                +screen(m)
+                    font-size: 15px   
+
+        div.products
+            grid-area: Products
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-gap: 24px
+            +screen(m)
+                grid-template-columns: repeat(2, 1fr)
+                align-items: end
+            +screen(xs)
+                grid-template-columns: 1fr
+
+            span.text
+                font-weight: 400
+                font-size: 17px
+                line-height: 118%
+                color: #6c6c6c
+                +screen(m)
+                    font-size: 15px
+                +screen(s)
+                    order: 9
+
+            a.capsule_product
+                display: grid
+                grid-gap: 15px
+
+                img
+                    aspect-ratio: 366 / 487
+                    width: 100%
+                    +screen(m)
+                        aspect-ratio: 335 / 419
+
+                div.text
+                    display: flex
+                    justify-content: space-between
+                    flex-direction: row
+                    flex-wrap: wrap
+                    gap: 12px
+
+                    strong
+                        font-weight: 400
+                        font-size: 30px
+                        line-height: 100%
+                        color: #000
+
+                    span.price
+                        font-family: Druk
+                        grid-area: Price
+                        font-weight: 700
+                        font-size: 30px
+                        line-height: 100%
+                        color: #000
+
+

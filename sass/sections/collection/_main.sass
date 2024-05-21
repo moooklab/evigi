@@ -1,0 +1,93 @@
+section.main
+    margin-top: 160px
+
+    div.title
+        display: grid
+        text-align: center
+        justify-content: center
+        border-bottom: 1px solid #D1D1D1
+        padding-bottom: 80px
+        +screen(m)
+            text-align: left
+            padding-bottom: 40px
+
+        h1
+            font-weight: 700
+            font-size: 80px
+            line-height: 100%
+            text-transform: uppercase
+            color: #000
+            margin-bottom: 30px
+            +screen(m)
+                font-size: 60px
+                line-height: 110%
+                margin-bottom: 20px
+
+        span
+            font-weight: 400
+            font-size: 30px
+            line-height: 100%
+            color: #000
+            max-width: 1084px
+            +screen(m)
+                font-size: 18px
+
+    div.list
+        display: grid
+        grid-gap: 60px
+        margin-top: 80px
+        margin-bottom: 100px
+        +screen(m)
+            margin-top: 40px
+            margin-bottom: 80px
+            grid-gap: 40px
+
+    div.collection
+        display: grid
+        grid-template-areas: 'Image Image' 'Title Text' 'Button Text'
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: max-content max-content max-content
+        grid-gap: 20px
+        +screen(m)
+            grid-template-areas: 'Title' 'Image' 'Text' 'Button'
+            grid-template-columns: 1fr
+            
+        &:not(:last-child)
+            padding-bottom: 60px
+            border-bottom: 1px solid #D1D1D1
+            +screen(m)
+                padding-bottom: 40px
+
+        img
+            grid-area: Image
+            width: 100%
+            aspect-ratio: 1536 / 784
+            object-fit: cover
+            object-position: center center
+            +screen(xs)
+                aspect-ratio: 335 / 560
+            
+
+        h2
+            grid-area: Title
+            +screen(m)
+                margin-top: -0.4em
+
+        div.text
+            grid-area: Text
+            max-width: 476px
+            font-weight: 400
+            font-size: 17px
+            line-height: 118%
+            color: #6c6c6c
+            margin-top: 10px
+            +screen(m)
+                font-size: 15px
+                margin-top: unset
+
+        a.button
+            grid-area: Button
+            justify-self: start
+            margin-top: 10px
+            +screen(m)
+                justify-self: center

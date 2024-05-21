@@ -1,0 +1,26 @@
+section.winter_two.capsul
+    div.container
+        div.title
+            h2 Winter two
+            span Встречаем холодный сезон с новой линейкой зимней обуви WINTER ENERGY, которая станет гармоничным дополнением теплых встреч с друзьями, стильным вариантом подарка для себя или близких. Коллекция представлена тремя капсулами.
+        div.description
+            img(src="images/webp/16.webp", alt="").first
+            img(src="images/webp/17.webp", alt="").second
+            span Лаконичные Мэри Джейн — актуальная и универсальная пара, которую дизайнеры выполнили из натуральной гладкой кожи черного цвета. Стильный ремешок t-strap на подъеме, комфортная гибкая подошва без каблука и закругленная носочная часть — отличительные черты модели. Ремешок регулируется по размеру и надежно фиксирует ногу. Туфли легко впишутся в любой гардероб и станут модной альтернативой лоферам.
+        div.video
+            div.play
+                div(onclick="this.parentNode.nextElementSibling.pause(); this.parentNode.classList.remove('played')").overlay
+                div(onclick="this.parentNode.nextElementSibling.play(); this.parentNode.classList.add('played')").icon: img(src="images/svg/play.svg", alt="")
+            video(poster="images/webp/13.webp")
+                source(src="images/test.mp4", type="video/mp4")
+        div.products
+            a(href="product.html").capsule_product
+                img(src="images/webp/14.webp", alt="")
+                div.text
+                    strong Шелковые туфли
+                    span.price 38 500 Р.
+            a(href="product.html").capsule_product
+                img(src="images/webp/15.webp", alt="")
+                div.text
+                    strong Кеды с мехом
+                    span.price 8 500 Р.
