@@ -33,10 +33,10 @@ section.summer_two.capsul
                     strong Шелковые туфли
                     span.price 38 500 Р.
             div.video
-                div.play
+                div.play.played
                     div(onclick="this.parentNode.nextElementSibling.pause(); this.parentNode.classList.remove('played')").overlay
                     div(onclick="this.parentNode.nextElementSibling.play(); this.parentNode.classList.add('played')").icon: img(src="images/svg/play.svg", alt="")
-                video(poster="images/webp/34.webp")
+                video(poster="images/webp/34.webp", autoplay)
                     source(src="images/test.mp4", type="video/mp4")
             a(href="product.html").capsule_product
                 img(src="images/webp/20.webp", alt="")

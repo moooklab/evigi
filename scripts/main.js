@@ -5,12 +5,54 @@ products = document.querySelectorAll('a.product')
 products.forEach( product => {
     new Swiper(product.querySelector('div.swiper'), {
         slidesPerView: 1,
-        spaceBetween: 1,
-        direction: 'vertical',
-        autoHeight: true,
+        spaceBetween: 0,
+        allowTouchMove: false,
+        speed: 200,
+        // direction: 'vertical',
+        // autoHeight: true,
         pagination: {
             el: product.querySelector('div.swiper-pagination'),
             clickable: true
+        },
+        on: {
+            init: function () {
+
+                // Добавляем области для переключения фотографий
+                navigationThumbs = document.createElement('div')
+                navigationThumbs.classList.add('navigation-thumbs')
+
+                for (let index = 0; index < this.slides.length; index++) {
+                    let navigationThumb = document.createElement('div')
+                        navigationThumb.classList.add('navigation-thumb')
+                        navigationThumbs.append(navigationThumb)
+                        
+                    // Добавляем активный класс к первому элементу 
+                    index == 0 && navigationThumb.classList.add('active')
+
+                    // При наведении меняем слайд, добавляем активный класс
+                    navigationThumb.addEventListener('mouseenter', event => {
+                        thumbs = navigationThumb.parentElement.querySelectorAll('.navigation-thumb')
+                        thumbs.forEach( thumb => {
+                            thumb.classList.remove('active')
+                        })
+                        navigationThumb.classList.add('active')
+                        this.slideTo(index)
+                    })
+
+                    // Возвращение на первое фото при покидании мышки
+                    // navigationThumbs.addEventListener('mouseleave', event => {
+                    //     thumbs = navigationThumb.parentElement.querySelectorAll('.navigation-thumb')
+                    //     thumbs.forEach( thumb => {
+                    //         thumb.classList.remove('active')
+                    //     })
+                    //     thumbs[0].classList.add('active')
+                    //     this.slideTo(0) 
+                    // })
+                }
+
+                this.el.prepend( navigationThumbs )
+
+            }
         }
     })
 })
@@ -73,12 +115,13 @@ new Swiper('section.categories div.swiper', {
             grid: false
         }
     }
-})
+}).slideTo(1)
 
 new Swiper('section.compilation div.container > div.swiper', {
     slidesPerView: 'auto',
     spaceBetween: 20,
     autoHeight: true,
+    watchSlidesProgress: true,
     breakpoints: {
         640: {
             slidesPerView: 2,

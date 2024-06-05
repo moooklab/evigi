@@ -54,13 +54,13 @@ section.main
                     div.accordion_content
                         div.accordion_overflow
                             div.accordion_wrap
-                                div.sizes
+                                div(onclick="this.querySelector('input:checked + span.disabled') ? this.nextElementSibling.classList.add('show') : this.nextElementSibling.classList.remove('show')").sizes
                                     label.radio
                                         input(type="radio", name="size", value="36", required)
                                         span 36
                                     label.radio
-                                        input(type="radio", name="size", value="36", disabled)
-                                        span 37
+                                        input(type="radio", name="size", value="36")
+                                        span.disabled 37
                                     label.radio
                                         input(type="radio", name="size", value="36")
                                         span 38

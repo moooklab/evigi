@@ -304,6 +304,26 @@ section.compilation {
 section.compilation div.container > div.swiper {
   overflow: visible;
 }
+section.compilation div.container > div.swiper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8) 300px, white 500px);
+  z-index: 2;
+}
+section.compilation div.container > div.swiper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8) 300px, white 500px);
+  z-index: 1;
+}
 section.compilation h2 {
   margin-bottom: 38px;
 }

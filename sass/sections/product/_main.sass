@@ -186,8 +186,14 @@ section.main
                     align-items: center
                     flex-wrap: wrap
                     gap: 10px 20px
+                
                 div.sizes
                     flex-wrap: wrap
+
+                    & + a.link
+                        display: none
+                        &.show
+                            display: block
 
                 div.colors
                     display: flex

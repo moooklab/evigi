@@ -14,7 +14,7 @@ footer
             display: grid
             grid-template-columns: repeat(2, 1fr)
             grid-gap: 60px
-            grid-template-areas: 'Logotype Logotype' 'First Second' 'Socials MWI'
+            grid-template-areas: 'Logotype Logotype' 'First Second' 'Socials Socials' 
         +screen(s)
             grid-gap: 60px 45px
 
@@ -27,7 +27,12 @@ footer
 
     a.mwi
         grid-area: MWI
+        // display: none
         margin-right: -30px
+        opacity: 0
+        pointer-events: none
+        +screen(l)
+            display: none
         +screen(s)
             margin-top: -10px
 
@@ -39,7 +44,7 @@ footer
         grid-gap: 20px
         width: max-content
         +screen(l)
-            justify-self: end
+            justify-self: center
         +screen(s)
             grid-gap: 14px
             margin-top: -10px

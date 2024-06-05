@@ -243,6 +243,12 @@ section.main form div.accordion div.accordion_content div.sizes {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+section.main form div.accordion div.accordion_content div.sizes + a.link {
+  display: none;
+}
+section.main form div.accordion div.accordion_content div.sizes + a.link.show {
+  display: block;
+}
 section.main form div.accordion div.accordion_content div.colors {
   display: -webkit-box;
   display: -ms-flexbox;
