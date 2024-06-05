@@ -3,6 +3,7 @@ section.main {
   height: calc(100vh - 95px);
   padding-bottom: 52px;
   min-height: 800px;
+  max-height: 1080px;
 }
 @media (max-width: 960px) {
   section.main {
