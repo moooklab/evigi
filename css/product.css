@@ -47,7 +47,7 @@ section.main div.gallery div.swiper div.swiper-slide {
   width: 100%;
   height: 100%;
 }
-section.main div.gallery div.swiper div.swiper-slide img {
+section.main div.gallery div.swiper div.swiper-slide img, section.main div.gallery div.swiper div.swiper-slide video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -244,10 +244,12 @@ section.main form div.accordion div.accordion_content div.sizes {
       flex-wrap: wrap;
 }
 section.main form div.accordion div.accordion_content div.sizes + a.link {
-  display: none;
+  pointer-events: none;
+  opacity: 0.5;
 }
 section.main form div.accordion div.accordion_content div.sizes + a.link.show {
-  display: block;
+  pointer-events: auto;
+  opacity: 1;
 }
 section.main form div.accordion div.accordion_content div.colors {
   display: -webkit-box;

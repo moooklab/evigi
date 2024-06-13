@@ -114,8 +114,13 @@ new Swiper('section.categories div.swiper', {
             spaceBetween: 24,
             grid: false
         }
+    },
+    on: {
+        'afterInit': function () {
+            this.slideTo(1)
+        }
     }
-}).slideTo(1)
+})
 
 new Swiper('section.compilation div.container > div.swiper', {
     slidesPerView: 'auto',

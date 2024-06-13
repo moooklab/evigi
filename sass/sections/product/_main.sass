@@ -33,7 +33,7 @@ section.main
                 width: 100%
                 height: 100%
 
-                img
+                img, video
                     width: 100%
                     height: 100%
                     object-fit: cover
@@ -191,9 +191,11 @@ section.main
                     flex-wrap: wrap
 
                     & + a.link
-                        display: none
+                        pointer-events: none
+                        opacity: 0.5
                         &.show
-                            display: block
+                            pointer-events: auto
+                            opacity: 1
 
                 div.colors
                     display: flex

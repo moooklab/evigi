@@ -10,12 +10,16 @@ mixin category(image, title)
         img(src=image, alt="")
         strong= title
 
-mixin product(image, title, text, price, tag, colors, sizes)
+mixin product(image, title, text, price, oldprice, tag, colors, sizes)
     a(href="product.html").product&attributes(attributes)
         div(onclick="event.preventDefault(); this.classList.toggle('active')").favourite
             include ../../images/svg/favourite.svg
         div.swiper
             div.swiper-wrapper
+                if tag
+                    div.swiper-slide
+                        video(poster="images/webp/18.webp", autoplay, muted)
+                            source(src="images/test2.mp4", type="video/mp4")
                 div.swiper-slide
                     img(src=image, alt="")
                 div.swiper-slide
@@ -51,7 +55,10 @@ mixin product(image, title, text, price, tag, colors, sizes)
                     span(style="background-color: #673715")
                 if colors >= 4
                     span(style="background-color: #DFE2E7")
-            span.price= price
+            div.prices
+                if oldprice
+                    span.oldprice= oldprice
+                span.current= price
 
 mixin select(name, title, ...items)
     fieldset.select(class=name)

@@ -1,0 +1,499 @@
+.w-mwi {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: max-content;
+    height: max-content;
+}
+
+.w-mwi__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse
+}
+
+div.main_button {
+    cursor: pointer;
+}
+
+.w-mwi-buttons__main-button .second-button .line_box {
+    position: relative;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    height: 100%;
+    width: 16px
+}
+
+.w-mwi-buttons__main-button .second-button .line-one {
+    width: 16px;
+    height: 1.5px;
+    background-color: #fff;
+    position: absolute;
+    top: 40%;
+    left: -16px;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: w-mwi-second-line-one;
+    animation-name: w-mwi-second-line-one
+}
+
+.w-mwi-buttons__main-button .second-button .line-two {
+    width: 11px;
+    height: 1.5px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: w-mwi-second-line-two;
+    animation-name: w-mwi-second-line-two
+}
+
+.w-mwi.open .w-mwi-buttons__main-button {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: url(data:image/svg+xml,%3Csvg\ width=\'40\'\ height=\'40\'\ viewBox=\'0\ 0\ 40\ 40\'\ fill=\'none\'\ xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath\ d=\'M30\ 10L10\ 30\'\ stroke=\'%23323232\'\ stroke-width=\'2\'\ stroke-linecap=\'square\'\ stroke-linejoin=\'round\'/%3E%3Cpath\ d=\'M10\ 10L30\ 30\'\ stroke=\'%23323232\'\ stroke-width=\'2\'\ stroke-linecap=\'square\'\ stroke-linejoin=\'round\'/%3E%3C/svg%3E%0A);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px 40px;
+    -webkit-transition: background .3s linear , -webkit-box-shadow .3s linear;
+    transition: background .3s linear , -webkit-box-shadow .3s linear;
+    -o-transition: background .3s linear , box-shadow .3s linear;
+    transition: background .3s linear , box-shadow .3s linear;
+    transition: background .3s linear , box-shadow .3s linear , -webkit-box-shadow .3s linear
+}
+
+.w-mwi.open .w-mwi-buttons__main-button .first-button, .w-mwi.open .w-mwi-buttons__main-button .second-button {
+    opacity: 0;
+    visibility: hidden
+}
+
+.w-mwi-buttons__button-icons__roller {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.w-mwi-buttons__button-icons__roller li {
+    -webkit-box-shadow: 0 26px 11px rgba(0,0,0,.01) , 0 15px 9px rgba(0,0,0,.05) , 0 7px 7px rgba(0,0,0,.09) , 0 2px 4px rgba(0,0,0,.1) , 0 0 0 rgba(0,0,0,.1);
+    box-shadow: 0 26px 11px rgba(0,0,0,.01) , 0 15px 9px rgba(0,0,0,.05) , 0 7px 7px rgba(0,0,0,.09) , 0 2px 4px rgba(0,0,0,.1) , 0 0 0 rgba(0,0,0,.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    margin: 0 0 -50px;
+    -webkit-transition: margin-bottom .3s , opacity .2s linear;
+    -o-transition: margin-bottom .3s , opacity .2s linear;
+    transition: margin-bottom .3s , opacity .2s linear;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.w-mwi-buttons__button-icons__roller li:hover .w-mwi-buttons__button_info {
+    opacity: 1;
+    visibility: visible;
+    bottom: 68px;
+    z-index: 100
+}
+
+.w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info {
+    z-index: -100;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .3s , bottom .3s ease-in-out;
+    -o-transition: opacity .3s , bottom .3s ease-in-out;
+    transition: opacity .3s , bottom .3s ease-in-out;
+    position: absolute;
+    right: calc(100% - 64px);
+    bottom: 100px;
+    padding-right: 64px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    -webkit-font-feature-settings: "pnum" on , "lnum" on;
+    font-feature-settings: "pnum" on , "lnum" on;
+    color: #323232;
+    -webkit-filter: drop-shadow(0 0 15px rgba(0,0,0,.2));
+    filter: drop-shadow(0 0 15px rgba(0,0,0,.2))
+}
+
+.w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info_item {
+    width: 292px;
+    background-color: #fff;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: auto
+}
+
+.w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info_item:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px
+}
+
+.w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info_item:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom: none
+}
+
+.w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info p {
+    margin: 0
+}
+
+.w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: initial
+}
+
+.w-mwi-buttons__button-icons__roller li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.w-mwi.open .w-mwi-buttons__button-icons__roller li {
+    margin: 0 0 8px;
+    opacity: 1;
+    visibility: visible
+}
+
+.w-mwi-buttons__button-icons__roller.animated li {
+    visibility: visible
+}
+
+.w-mwi-buttons__button-tel {
+    background: #9951a0
+}
+
+.w-mwi-buttons__button-wa {
+    background: #1cd741
+}
+
+.w-mwi-buttons__button-tg {
+    background: #40b3e0
+}
+
+@-webkit-keyframes w-mwi-first {
+    48% {
+        opacity: 1;
+    }
+
+    53% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 1;
+    }
+}
+
+@keyframes w-mwi-first {
+    48% {
+        opacity: 1;
+    }
+
+    53% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes w-mwi-second {
+    53% {
+        opacity: 0;
+    }
+
+    58% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0;
+    }
+}
+
+@keyframes w-mwi-second {
+    53% {
+        opacity: 0;
+    }
+
+    58% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes w-mwi-second-line-one {
+    0% {
+        left: -16px;
+        width: 16px;
+    }
+
+    60% {
+        left: -16px;
+        width: 16px;
+    }
+
+    70% {
+        left: 0;
+        width: 16px;
+    }
+
+    80% {
+        left: 0px;
+        width: 16px;
+    }
+
+    90% {
+        left: 16px;
+        width: 16px;
+    }
+
+    100% {
+        left: 16px;
+        width: 0;
+    }
+}
+
+@keyframes w-mwi-second-line-one {
+    0% {
+        left: -16px;
+        width: 16px;
+    }
+
+    60% {
+        left: -16px;
+        width: 16px;
+    }
+
+    70% {
+        left: 0;
+        width: 16px;
+    }
+
+    80% {
+        left: 0px;
+        width: 16px;
+    }
+
+    90% {
+        left: 16px;
+        width: 16px;
+    }
+
+    100% {
+        left: 16px;
+        width: 0;
+    }
+}
+
+@-webkit-keyframes w-mwi-second-line-two {
+    0% {
+        left: -11px;
+        width: 11px;
+    }
+
+    70% {
+        left: -11px;
+        width: 11px;
+    }
+
+    80% {
+        left: 0;
+        width: 11px;
+    }
+
+    90% {
+        left: 11px;
+        width: 0;
+    }
+
+    100% {
+        left: 0;
+        width: 0;
+    }
+}
+
+@keyframes w-mwi-second-line-two {
+    0% {
+        left: -11px;
+        width: 11px;
+    }
+
+    70% {
+        left: -11px;
+        width: 11px;
+    }
+
+    80% {
+        left: 0;
+        width: 11px;
+    }
+
+    90% {
+        left: 11px;
+        width: 0;
+    }
+
+    100% {
+        left: 0;
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .w-mwi {
+        bottom:8px;
+        right: 8px
+    }
+
+    .w-mwi.is-upper {
+        bottom: 88px;
+        right: 8px
+    }
+
+    .w-mwi-buttons__main-button {
+        width: 50px;
+        height: 50px
+    }
+
+    .w-mwi-buttons__main-button .first-button {
+        width: 34px;
+        height: 34px
+    }
+
+    .w-mwi-buttons__main-button .second-button .line_box {
+        left: 12px;
+        width: 14px
+    }
+
+    .w-mwi-buttons__main-button .second-button {
+        width: 40px;
+        height: 40px
+    }
+
+    .w-mwi.open .w-mwi-buttons__main-button {
+        background-size: 34px 34px
+    }
+
+    .w-mwi-buttons__button-icons__roller li {
+        width: 50px;
+        height: 50px
+    }
+
+    .w-mwi-buttons__button-icons__roller li:hover .w-mwi-buttons__button_info {
+        bottom: 48px;
+        -webkit-filter: drop-shadow(0 0 15px rgba(0,0,0,.2));
+        filter: drop-shadow(0 0 15px rgba(0,0,0,.2))
+    }
+
+    .w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info {
+        font-size: 10px;
+        line-height: 16px
+    }
+
+    .w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info_item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding: 10px;
+        width: 217px;
+        position: relative
+    }
+
+    .w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info a {
+        font-size: 0;
+        display: block;
+        width: 90%;
+        min-width: 14px;
+        height: 70%;
+        background-image: url(data:image/svg+xml,%3Csvg\ width=\'14\'\ height=\'14\'\ viewBox=\'0\ 0\ 14\ 14\'\ fill=\'none\'\ xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg\ clip-path=\'url\(%23clip0_456_9\)\'%3E%3Cpath\ d=\'M12.8333\ 9.86977V11.6198C12.834\ 11.7822\ 12.8007\ 11.943\ 12.7356\ 12.0919C12.6705\ 12.2407\ 12.5751\ 12.3744\ 12.4554\ 12.4842C12.3357\ 12.594\ 12.1943\ 12.6776\ 12.0404\ 12.7297C11.8865\ 12.7817\ 11.7235\ 12.8011\ 11.5617\ 12.7864C9.76665\ 12.5914\ 8.04242\ 11.978\ 6.5275\ 10.9956C5.11807\ 10.1\ 3.92311\ 8.90504\ 3.0275\ 7.49561C2.04166\ 5.97381\ 1.42814\ 4.24119\ 1.23667\ 2.4381C1.22209\ 2.27679\ 1.24126\ 2.11422\ 1.29296\ 1.96072C1.34466\ 1.80722\ 1.42775\ 1.66617\ 1.53695\ 1.54655C1.64615\ 1.42693\ 1.77905\ 1.33135\ 1.92721\ 1.26591C2.07537\ 1.20047\ 2.23553\ 1.16659\ 2.3975\ 1.16644H4.1475C4.4306\ 1.16365\ 4.70505\ 1.2639\ 4.9197\ 1.4485C5.13434\ 1.6331\ 5.27455\ 1.88945\ 5.31417\ 2.16977C5.38803\ 2.72981\ 5.52501\ 3.2797\ 5.7225\ 3.80894C5.80099\ 4.01773\ 5.81797\ 4.24464\ 5.77145\ 4.46279C5.72492\ 4.68093\ 5.61684\ 4.88117\ 5.46\ 5.03977L4.71917\ 5.7806C5.54958\ 7.24101\ 6.75877\ 8.4502\ 8.21917\ 9.2806L8.96\ 8.53977C9.1186\ 8.38293\ 9.31884\ 8.27485\ 9.53699\ 8.22833C9.75513\ 8.1818\ 9.98205\ 8.19879\ 10.1908\ 8.27727C10.7201\ 8.47476\ 11.27\ 8.61174\ 11.83\ 8.68561C12.1134\ 8.72558\ 12.3722\ 8.86831\ 12.5571\ 9.08664C12.7421\ 9.30498\ 12.8404\ 9.58369\ 12.8333\ 9.86977Z\'\ stroke=\'%23323232\'\ stroke-linecap=\'round\'\ stroke-linejoin=\'round\'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath\ id=\'clip0_456_9\'%3E%3Crect\ width=\'14\'\ height=\'14\'\ fill=\'white\'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A);
+        background-repeat: no-repeat;
+        background-position: top left;
+        position: absolute
+    }
+
+    .w-mwi-buttons__button-icons__roller li .w-mwi-buttons__button_info p {
+        padding-left: 21px
+    }
+
+    .w-mwi-buttons__button-tel svg {
+        width: 32px;
+        height: 32px
+    }
+
+    .w-mwi-buttons__button-wa svg {
+        width: 33px;
+        height: 33px
+    }
+
+    .w-mwi-buttons__button-tg svg {
+        width: 28px;
+        height: 28px;
+        margin-right: 2px
+    }
+}
