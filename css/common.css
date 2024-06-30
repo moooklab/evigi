@@ -445,6 +445,14 @@ textarea {
   resize: vertical;
 }
 
+video {
+  pointer-events: none;
+}
+video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 1 !important;
+}
+
 @media (max-width: 640px) {
   a.collection {
     text-align: center;
@@ -1041,7 +1049,7 @@ header a.menu {
   justify-items: center;
   margin-left: 16px;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1280px) {
   header a.menu {
     display: grid;
   }
@@ -1076,7 +1084,7 @@ header menu {
   margin-left: -10px;
   z-index: 2;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1280px) {
   header menu {
     margin-left: unset;
   }
@@ -1093,7 +1101,7 @@ header menu a {
   gap: 5px;
   padding: 10px;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1280px) {
   header menu a {
     display: none;
   }

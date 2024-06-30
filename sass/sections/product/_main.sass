@@ -20,6 +20,7 @@ section.main
             grid-gap: 20px
 
     div.gallery
+        display: grid
         grid-area: Gallery
         div.swiper
             width: 100%
@@ -41,10 +42,11 @@ section.main
 
         div.swiper-pagination
             display: grid
-            grid-auto-flow: row
+            grid-auto-flow: column
             grid-auto-rows: max-content
+            justify-content: center
             grid-gap: 8px
-            right: 20px
+            bottom: 20px
                 
             span.swiper-pagination-bullet
                 width: 14px

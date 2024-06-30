@@ -6,7 +6,7 @@ products.forEach( product => {
     new Swiper(product.querySelector('div.swiper'), {
         slidesPerView: 1,
         spaceBetween: 0,
-        allowTouchMove: false,
+        // allowTouchMove: false,
         speed: 200,
         // direction: 'vertical',
         // autoHeight: true,
@@ -147,7 +147,7 @@ new Swiper('section.main div.swiper.reviews', {
 new Swiper('section.main div.swiper.product', {
     slidesPerView: 1,
     spaceBetween: 1,
-    direction: 'vertical',
+    // direction: 'vertical',
     autoHeight: true,
     pagination: {
         el: document.querySelector('section.main div.swiper.product div.swiper-pagination'),

@@ -343,6 +343,9 @@ section.compilation a.product {
   section.compilation a.product {
     width: 292px;
   }
+  section.compilation a.product div.swiper {
+    pointer-events: none;
+  }
 }
 section.compilation button {
   display: none;

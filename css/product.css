@@ -30,6 +30,7 @@ section.main div.container {
   }
 }
 section.main div.gallery {
+  display: grid;
   grid-area: Gallery;
 }
 section.main div.gallery div.swiper {
@@ -57,11 +58,14 @@ section.main div.gallery div.swiper div.swiper-slide img, section.main div.galle
 }
 section.main div.gallery div.swiper-pagination {
   display: grid;
-  grid-auto-flow: row;
+  grid-auto-flow: column;
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-gap: 8px;
-  right: 20px;
+  bottom: 20px;
 }
 section.main div.gallery div.swiper-pagination span.swiper-pagination-bullet {
   width: 14px;

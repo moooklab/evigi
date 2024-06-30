@@ -19,7 +19,7 @@ section.winter_one.capsul
             div.play.played
                 div(onclick="this.parentNode.nextElementSibling.pause(); this.parentNode.classList.remove('played')").overlay
                 div(onclick="this.parentNode.nextElementSibling.play(); this.parentNode.classList.add('played')").icon: img(src="images/svg/play.svg", alt="")
-            video(poster="images/webp/18.webp", autoplay)
+            video(poster="images/webp/18.webp", autoplay, loop)
                 source(src="images/test.mp4", type="video/mp4")
         div.products
             a(href="product.html").capsule_product

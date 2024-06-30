@@ -190,6 +190,12 @@ textarea
     min-height: 44px
     resize: vertical
 
+video
+    pointer-events: none
+    &::-webkit-media-controls-panel
+        display: none !important
+        opacity: 1 !important
+
 a.collection
     +screen(s)
         text-align: center
