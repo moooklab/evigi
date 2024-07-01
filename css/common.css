@@ -550,6 +550,8 @@ a.category strong {
 a.product {
   display: grid;
   position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 a.product div.swiper {
   width: 100%;
@@ -637,6 +639,7 @@ a.product div.favourite {
   a.product div.favourite {
     top: 16px;
     right: 16px;
+    opacity: 1 !important;
   }
 }
 a.product div.favourite svg path {
