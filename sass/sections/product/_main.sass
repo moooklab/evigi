@@ -22,14 +22,14 @@ section.main
     div.gallery
         display: grid
         grid-area: Gallery
+        width: 100%
+        aspect-ratio: 626 / 757
+        +screen(m)
+            max-height: 700px
+            aspect-ratio: 337 / 536
         div.swiper
             width: 100%
             min-width: 0
-            aspect-ratio: 626 / 757
-            +screen(m)
-                max-height: 700px
-                aspect-ratio: 337 / 536
-
             div.swiper-slide
                 width: 100%
                 height: 100%

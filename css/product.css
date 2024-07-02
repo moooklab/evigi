@@ -32,17 +32,18 @@ section.main div.container {
 section.main div.gallery {
   display: grid;
   grid-area: Gallery;
+  width: 100%;
+  aspect-ratio: 626/757;
+}
+@media (max-width: 960px) {
+  section.main div.gallery {
+    max-height: 700px;
+    aspect-ratio: 337/536;
+  }
 }
 section.main div.gallery div.swiper {
   width: 100%;
   min-width: 0;
-  aspect-ratio: 626/757;
-}
-@media (max-width: 960px) {
-  section.main div.gallery div.swiper {
-    max-height: 700px;
-    aspect-ratio: 337/536;
-  }
 }
 section.main div.gallery div.swiper div.swiper-slide {
   width: 100%;
