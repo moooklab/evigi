@@ -417,7 +417,7 @@ div.main_button {
     }
 }
 
-@keyframes wmi {
+/* @keyframes wmi {
     0% {
         fill: #C6D50A;
     }
@@ -427,7 +427,7 @@ div.main_button {
     100% {
         fill: #C6D50A;
     }
-}
+} */
 @keyframes wmi-pos {
     0% {
         bottom: 20px;
