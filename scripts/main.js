@@ -148,7 +148,7 @@ new Swiper('section.main div.swiper.product', {
     slidesPerView: 1,
     spaceBetween: 1,
     // direction: 'vertical',
-    autoHeight: true,
+    // autoHeight: true,
     pagination: {
         el: document.querySelector('section.main div.swiper.product div.swiper-pagination'),
         clickable: true
